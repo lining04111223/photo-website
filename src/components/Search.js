@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Search = (props) => {
+  const inputHandler = (e) => {
+    props.setInput(e.target.value);
+  };
   return (
     <div className="search">
-      <input type="text" />
+      <input onChange={inputHandler} type="text" />
       <button onClick={props.search}>Search</button>
     </div>
   );
