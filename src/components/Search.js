@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Search = () => {
+const Search = (props) => {
   return (
     <div className="search">
       <input type="text" />
-      <button>Search</button>
+      <button onClick={props.search}>Search</button>
     </div>
   );
 };
